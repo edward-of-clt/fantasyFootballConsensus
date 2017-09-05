@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Fantasy Football Consensus</title>
+<style>
+body {
+  font-family: "Open Sans", sans-serif;
+  line-height: 1.25;
+}
+table {
+border: 1px solid #ccc;
+border-collapse: collapse;
+margin: 0;
+padding: 0;
+width: 100%;
+table-layout: fixed;
+}
+table caption {
+font-size: 1.5em;
+margin: .5em 0 .75em;
+}
+table tr {
+background: #f8f8f8;
+border: 1px solid #ddd;
+padding: .35em;
+}
+table th,
+table td {
+padding: .625em;
+text-align: center;
+}
+table th {
+font-size: .85em;
+letter-spacing: .1em;
+text-transform: uppercase;
+}
+@media screen and (max-width: 600px) {
+table {
+  border: 0;
+}
+table caption {
+  font-size: 1.3em;
+}
+table thead {
+  border: none;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+table tr {
+  border-bottom: 3px solid #ddd;
+  display: block;
+  margin-bottom: .625em;
+}
+table td {
+  border-bottom: 1px solid #ddd;
+  display: block;
+  font-size: .8em;
+  text-align: right;
+}
+table td:before {\
+  content: attr(data-label);
+  float: left;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+table td:last-child {
+  border-bottom: 0;
+}
+}
+</style>
+</head>
+<body>
+  <table>
+    <caption>Weekly Rating</caption>
+    <thead>
+      <tr>
+        <th scope="col">Position</th>
+        <th scope="col">Player Name</th>
+        <th scope="col">Opponent</th>
+        <th scope="col">Consensus Ranking</th>
+        <th scope="col">Points/Average</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td data-label="Position">Visa - 3412</td>
+        <td data-label="Player Name">04/01/2016</td>
+        <td data-label="Opponent">$1,190</td>
+        <td data-label="Consensus Ranking">03/01/2016 - 03/31/2016</td>
+        <td data-label="Points/Average">$1,190</td>
+      </tr>
+      <tr>
+        <td scope="row" data-label="Position">Visa - 6076</td>
+        <td data-label="Player Name">03/01/2016</td>
+        <td data-label="Opponent">$2,443</td>
+        <td data-label="Consensus Ranking">02/01/2016 - 02/29/2016</td>
+        <td data-label="Points/Average">$1,190</td>
+      </tr>
+    </tbody>
+  </table>
+
+<script>
+function loadXMLDoc() {
+  var xmlhttp = new XMLHttpRequest();
+  xmlhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      myFunction(this);
+    }
+  };
+  xmlhttp.open("GET", "test.xml", true);
+  xmlhttp.send();
+}
+function myFunction(xml) {
+  var i;
+  var xmlDoc = xml.responseXML;
+  var table="<tr><th>Artist</th><th>Title</th></tr>";
+  var x = xmlDoc.getElementsByTagName("CD");
+  for (i = 0; i <x.length; i++) {
+    table += "<tr><td>" +
+    x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+    "</td><td>" +
+    x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+    "</td></tr>";
+  }
+  document.getElementById("demo").innerHTML = table;
+}
+</script>
+</body>
+</html>
