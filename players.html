@@ -75,7 +75,7 @@ table td:last-child {
 </style>
 </head>
 <body>
-  <table>
+<!--  <table>
     <caption>Weekly Rating</caption>
     <thead>
       <tr>
@@ -102,7 +102,23 @@ table td:last-child {
         <td data-label="Points/Average">$1,190</td>
       </tr>
     </tbody>
-  </table>
+  </table>-->
+<button type="button" onclick="loadXMLDoc()">Get my CD collection</button>
+<table id="weeklyRanking">
+<caption>Weekly Rating</caption>
+<thead>
+  <tr>
+    <th scope="col">Position</th>
+    <th scope="col">Player Name</th>
+    <th scope="col">Opponent</th>
+    <th scope="col">Consensus Ranking</th>
+    <th scope="col">Points/Average</th>
+  </tr>
+</thead>
+<tbody>
+
+</tbody>
+</table>
 
 <script>
 function loadXMLDoc() {
@@ -118,16 +134,21 @@ function loadXMLDoc() {
 function myFunction(xml) {
   var i;
   var xmlDoc = xml.responseXML;
-  var table="<tr><th>Artist</th><th>Title</th></tr>";
-  var x = xmlDoc.getElementsByTagName("CD");
+
+  var tbody="<tbody></tbody>";
+  var x = xmlDoc.getElementsByTagName("Player");
   for (i = 0; i <x.length; i++) {
-    table += "<tr><td>" +
-    x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+    tbody += "<tr>" +
+    "<td data-label=\"Player Name\">" + x[i].getElementsByTagName("name")[0].childNodes[0].nodeValue +
     "</td><td>" +
-    x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+      "<td data-label=\"Player Name\">" + x[i].getElementsByTagName("position")[0].childNodes[0].nodeValue +
+    "</td></tr>" +
+      "<td data-label=\"Team\">" + x[i].getElementsByTagName("team")[0].childNodes[0].nodeValue +
+    "</td></tr>" +
+      "<td data-label=\"PPR Average\">" + x[i].getElementsByTagName("ppr")[0].childNodes[0].nodeValue +
     "</td></tr>";
   }
-  document.getElementById("demo").innerHTML = table;
+  document.getElementById("weeklyRanking").innerHTML = tbody;
 }
 </script>
 </body>
