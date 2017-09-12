@@ -1,0 +1,50 @@
+<ByeWeeks>
+<Week number="1">
+  <Team code="MIA" name="Miami Dolphins"/>
+  <Team code="TB" name="Tampa Bay Buccaneers"/>
+</Week>
+<Week number="5">
+  <Team code="ATL" name="Atlanta Falcons"/>
+  <Team code="DEN" name="Denver Broncos"/>
+  <Team code="NO" name="New Orleans Saints"/>
+  <Team code="WAS" name="Washington Redskins"/>
+</Week>
+<Week number="6">
+  <Team code="BUF" name="Buffalo Bills"/>
+  <Team code="CIN" name="Cincinnati Bengals"/>
+  <Team code="DAL" name="Dallas Cowboys"/>
+  <Team code="SEA" name="Seattle Seahawks"/>
+</Week>
+<Week number="7">
+  <Team code="HOU" name="Houston Texans"/>
+  <Team code="DET" name="Detroit Lions"/>
+</Week>
+<Week number="8">
+  <Team code="TEN" name="Tennessee Titans"/>
+  <Team code="NYG" name="New York Giants"/>
+  <Team code="JAC" name="Jacksonville Jaguars"/>
+  <Team code="ARI" name="Arizona Cardinals"/>
+  <Team code="STL" name="St. Louis Rams"/>
+  <Team code="GB" name="Green Bay Packers"/>
+</Week>
+<Week number="9">
+  <Team code="CHI" name="Chicago Bears"/>
+  <Team code="CLE" name="Cleveland Browns"/>
+  <Team code="SD" name="San Diego Chargers"/>
+  <Team code="PIT" name="Pittsburgh Steelers"/>
+  <Team code="MIN" name="Minnesota Vikings"/>
+  <Team code="NE" name="New England Patriots"/>
+</Week>
+<Week number="10">
+  <Team code="BAL" name="Baltimore Ravens"/>
+  <Team code="KC" name="Kansas City Chiefs"/>
+  <Team code="OAK" name="Oakland Raiders"/>
+  <Team code="PHI" name="Philadelphia Eagles"/>
+</Week>
+<Week number="11">
+  <Team code="SF" name="San Francisco 49ers"/>
+  <Team code="NYJ" name="New York Jets"/>
+  <Team code="CAR" name="Carolina Panthers"/>
+  <Team code="IND" name="Indianapolis Colts"/>
+</Week>
+</ByeWeeks>
