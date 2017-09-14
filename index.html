@@ -82,32 +82,10 @@
     </form>
   </div>
 </div>
+<div id="byeWeeks"></div>
 <button onclick="diceRoll()">Roll Teams</button>
 <div id="teams"></div>
-
-
-<!--<script>
-displayByes(0);
-
-function displayByes(i) {
-    var xmlhttp = new XMLHttpRequest();
-    xmlhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
-            myFunction(this, i);
-        }
-    };
-    xmlhttp.open("GET", "byeWeeks.xml", true);
-    xmlhttp.send();
-}
-function myFunction(xml, i) {
-    var xmlDoc = xml.responseXML;
-    x = xmlDoc.getElementsByTagName("ByeWeeks");
-    document.getElementById("byeWeeks").innerHTML =
-    "Teams On Bye: " +
-    x[i].getElementsByTagName("Week")[0].childNodes[0].nodeValue;
-    console.log(x[i].getElementsByTagName("Week")[0].getElementsByTagName("Team")[0].outerHTML);
-}
-</script>-->
-    <script src="js/index.js"></script>
+<script src="js/index.js"></script>
+<script src="js/byeweek.js"></script>
 </body>
 </html>
