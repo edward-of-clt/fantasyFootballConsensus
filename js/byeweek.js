@@ -1,44 +1,25 @@
-/*var xhttp = new XMLHttpRequest();
-xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-        myFunction(this);
-    }
-};
-xhttp.open("GET", "../byeWeeks.xml", true);
-xhttp.send();
-
-function myFunction(xml) {
-    var x, txt, xmlDoc;
-    xmlDoc = xml.responseXML;
-    x = xmlDoc.getElementsByTagName("Team");
-    for (i = 0; i < x.length; i++) {
-       txt += x[i].getAttribute('name') + "<br>";
-
-
-    document.getElementById("byeWeeks").innerHTML = txt;
-}*/
-
 Date.prototype.getWeekNumber = function(){
   var d = new Date(Date.UTC(this.getFullYear(), this.getMonth(), this.getDate()));
-  var dayNum = d.getUTCDay() || 7;
+  var dayNum = d.getUTCDay() || 7;;
   d.setUTCDate(d.getUTCDate() + 4 - dayNum);
   var yearStart = new Date(Date.UTC(d.getUTCFullYear(),0,1));
   return Math.ceil((((d - yearStart) / 86400000) + 1)/7)
 };
 
+var dateObj = new Date();
+var month = dateObj.getUTCMonth() + 1; //months from 1-12
+var day = dateObj.getUTCDate();
+var year = dateObj.getUTCFullYear();
 
-var curr = new Date;
-var firstday = new Date(curr.setDate(curr.getDate() - curr.getDay()));
-var lastday = new Date(curr.setDate(curr.getDate() - curr.getDay()+6));
-
-console.log(new Date().getWeekNumber());
+newdate = year + "/" + month + "/" + day;
+console.log(newdate);
 
   var week;
 switch (true){
-    case new Date().getWeekNumber() == 37:
+    case new Date().getDay() == Date(2017, 9, 15):
         week = "Miami Dolphins, Tampa Bay Buccaneers";
         break;
-    case new Date().getWeekNumber() == 38:
+    /*case new Date().getDay() == Date(2017, 10, 5):
         week = "Atlanta Falcons, Denver Broncos, New Orleans Saints, Washington Redskins";
         break;
     case new Date().getWeekNumber() == 39:
@@ -58,8 +39,9 @@ switch (true){
         break;
     case 7:
         week = "San Francisco 49ers, New York Jets, Carolina Panthers, Indianapolis Colts";
-        break;
+        break;*/
     default:
       week = "No Teams";
 }
+
 document.getElementById("byeWeeks").innerHTML = week + " On Bye";
