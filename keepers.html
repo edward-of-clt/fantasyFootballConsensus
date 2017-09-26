@@ -38,55 +38,40 @@ button{
   margin: 0 0 10px 0;
 }
 </style>
-<script>
-function allowDrop(ev) {
-    ev.preventDefault();
-}
-
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-}
-</script>
 </head>
 <body>
   <h1>Teams</h1>
   <button onclick="diceRoll()">Roll Teams</button>
       <ul id="draftTeam">
         <li>Ty Eades
-          <div id="team1" class="team-area" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div id="teamTy" class="team-area" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         </li>
         <li>Travis Hyatt
-          <div id="team2" class="team-area" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div id="teamTravis" class="team-area" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         </li>
         <li>John Bryant
-          <div id="team3" class="team-area" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div id="teamBryant" class="team-area" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         </li>
         <li>Elijah Townsend
-          <div id="team4" class="team-area" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div id="teamElijah" class="team-area" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         </li>
         <li>Brad Royal
-          <div id="team5" class="team-area" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div id="teamBrad" class="team-area" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         </li>
         <li>Kiran Mangipudi
-          <div id="team6" class="team-area" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div id="teamKiran" class="team-area" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         </li>
         <li>John Miller
-          <div id="team7" class="team-area" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div id="teamMiller" class="team-area" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         </li>
         <li>Ryan Knox
-          <div id="team8" class="team-area" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div id="teamKnox" class="team-area" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         </li>
         <li>Daniel Hedrick
-          <div id="team9" class="team-area" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div id="teamDaniel" class="team-area" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         </li>
         <li>Matt Armfield
-          <div id="team10" class="team-area" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          <div id="teamMatt" class="team-area" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
         </li>
         <li>Left Over
           <div id="team11"></div>
@@ -96,45 +81,43 @@ function drop(ev) {
 
       <div id="drag-teams">
         <h2>Keeper</h2>
-        <div draggable="true" ondragstart="drag(event)" id="drag1">Arizona</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag2">Atlanta</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag3">Baltimore</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag4">Buffalo</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag5">Carolina</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag6">Chicago</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag7">Cincinnati</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag8">Cleveland</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag9">Dallas</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag10">Denver</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag11">Detroit</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag12">Green Bay</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag13">Houston</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag14">Indianapolis</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag15">Jacksonville</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag16">Kansas City</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag17">LA Rams</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag18">LA Chargers</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag19">Miami</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag20">Minnesota</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag21">New England</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag22">New Orleans</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag23">NY Jets</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag24">NY Giants</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag25">Oakland</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag26">Philadelphia</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag27">Pittsburgh</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag28">San Francisco</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag29">Seattle</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag30">Tampa Bay</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag31">Tennessee</div><br/>
-        <div draggable="true" ondragstart="drag(event)" id="drag32">Washington</div>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="Arizona">Arizona</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="Atlanta">Atlanta</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="Baltimore">Baltimore</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="Buffalo">Buffalo</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="Carolina">Carolina</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="Chicago">Chicago</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="Cincinnati">Cincinnati</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="Cleveland">Cleveland</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="Dallas">Dallas</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="Denver">Denver</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="Detroit">Detroit</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="Green Bay">Green Bay</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="Houston">Houston</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="Indianapolis">Indianapolis</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="Jacksonville">Jacksonville</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="Kansas-City">Kansas City</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="LA-Rams">LA Rams</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="LA-Chargers">LA Chargers</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="Miami">Miami</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="Minnesota">Minnesota</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="New England">New England</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="New Orleans">New Orleans</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="NY-Jets">NY Jets</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="NY-Giants">NY Giants</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="Oakland">Oakland</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="Philadelphia">Philadelphia</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="Pittsburgh">Pittsburgh</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="San Francisco">San Francisco</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="Seattle">Seattle</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="Tampa-Bay">Tampa Bay</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="Tennessee">Tennessee</div><br/>
+        <div draggable="true" class="teamKeep" ondragstart="drag(event)" id="Washington">Washington</div>
       </div>
 
 
 <div id="teams"></div>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
-<script src="js/vendor/foundation.min.js"></script>
-<script>$(document).foundation();</script>
 <script src="js/dice.js"></script>
 </body>
 </html>
