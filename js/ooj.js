@@ -8,11 +8,18 @@ Rosters Array
 ******/
   var rosters = ['teamTy', 'teamTravis', 'teamBryant', 'teamElijah', 'teamBrad', 'teamKiran', 'teamMiller', 'teamKnox', 'teamDaniel', 'teamMatt'];
 
-var arrayLength = rosters.length;
-for (var i = 0; i < arrayLength; i++) {
-    console.log(rosters[i]);
-    //Do something
-    var
+
+function weeklyTeam(name, teams, keeper){
+  this.name = name;
+  this.teams = {
+    first,
+    second,
+    third
+  };
+  this.keeper = false;
+  this.display = function(){
+    document.getElementById(this.name).innerHTML = shuffle(NFLTeams);
+  };
 }
 
 /***
@@ -53,7 +60,6 @@ function remove(arr, what) {
       console.log(NFLTeams);
 };
 
-
 /****
 Shuffle NFLTeams array
 *******/
@@ -68,14 +74,3 @@ function shuffle(arra1) {
     }
     return arra1;
 }
-
-/****
-Loop through teams  === 3, and print randomized teams to rosterTeam
-*******/
-
-/*for (var index = 0; index < NFLTeams.length; index++)
-    {
-        NFLTeams[index] = (NFLTeams[index]);
-        document.getElementById(rosters[index]).innerHTML = NFLTeams[index];
-        console.log(NFLTeams[index]);
-    }*/
