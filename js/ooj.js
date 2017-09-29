@@ -71,7 +71,7 @@ function shuffle(arra1) {
   }
 
 
-function weeklyTeam(name, teams, keeper){
+function weeklyTeam(name, first, second, third, keeper){
   this.name = name;
   this.teams = {
     first,
@@ -79,9 +79,7 @@ function weeklyTeam(name, teams, keeper){
     third
   };
   this.keeper = false;
-  this.display = function(){
-    alert(this.teams);
-  };
+  this.display = addTeam();
 }
 
 document.addEventListener('DOMContentLoaded', function addTeam(){
