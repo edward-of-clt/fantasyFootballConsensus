@@ -3,7 +3,7 @@
 **********/
 var NFLTeams = ["Arizona","Atlanta", "Baltimore", "Buffalo", "Carolina", "Chicago", "Cincinnati", "Cleveland", "Dallas", "Denver", "Detroit", "Green Bay", "Houston", "Indianapolis", "Jacksonville", "Kansas-City", "LA-Rams", "LA-Chargers", "Miami", "Minnesota", "New-England", "New-Orleans", "NY-Jets", "NY-Giants", "Oakland", "Philadelphia", "Pittsburgh", "San Francisco", "Seattle", "Tampa-Bay", "Tennessee", "Washington"];
 
-var fullTeams = {
+/*var fullTeams = {
   Team1: {
       Value: 'arizona',
       DisplayName: "Arizona"
@@ -36,13 +36,7 @@ var fullTeams = {
       Value: 'cleveland',
       DisplayName: "Cleveland"
     }
-};
-
-for (var key in fullTeams) {
-      if (fullTeams.hasOwnProperty(key)) {
-        console.log(fullTeams[0].DisplayName);
-      }
-    }
+};*/
 
 /***
 Rosters Array
@@ -64,6 +58,18 @@ function shuffle(arra1) {
       return arra1;
   }
 
+  /***
+  Remove From Array
+  ****/
+  function remove(arr, what) {
+    var found = arr.indexOf(what);
+
+    while (found !== -1) {
+        arr.splice(found, 1);
+        found = arr.indexOf(what);
+    }
+  }
+
 
 function weeklyTeam(name, teams, keeper){
   this.name = name;
@@ -78,6 +84,12 @@ function weeklyTeam(name, teams, keeper){
   };
 }
 
-
-shuffle(NFLTeams);
-console.log(NFLTeams);
+document.addEventListener('DOMContentLoaded', function addTeam(){
+  shuffle(NFLTeams);
+  console.log(NFLTeams);
+  for (i = 0; i < NFLTeams.length; i++) {
+  var  add = NFLTeams.shift();
+    console.log(add);
+    weeklyTeam["teams"] = add;
+  }
+}, false);
