@@ -13,82 +13,17 @@
   <div class="container">
     <div class="half-section">
       <ul id="draftTeam">
-        <h1>Teams</h1>
-        <li>Ty Eades
-          <div id="team1"></div>
-        </li>
-        <li>Travis Hyatt
-          <div id="team2"></div>
-        </li>
-        <li>John Bryant
-          <div id="team3"></div>
-        </li>
-        <li>Elijah Townsend
-          <div id="team4"></div>
-        </li>
-        <li>Brad Royal
-          <div id="team5"></div>
-        </li>
-        <li>Kiran Mangipudi
-          <div id="team6"></div>
-        </li>
-        <li>John Miller
-          <div id="team7"></div>
-        </li>
-        <li>Ryan Knox
-          <div id="team8"></div>
-        </li>
-        <li>Daniel Hedrick
-          <div id="team9"></div>
-        </li>
-        <li>Matt Armfield
-          <div id="team10"></div>
-        </li>
-        <li>Left Over
-          <div id="team11"></div>
-        </li>
+
       </ul>
   </div>
   <div class="half-section">
     <form id="keepers">
       <h1>Keepers</h1>
-      <label>Arizona <input value="Arizona" class="teamBox" type="checkbox"></label><br/>
-      <label>Atlanta <input value="Atlanta" class="teamBox" type="checkbox"></label><br/>
-      <label>Baltimore <input value="Baltimore" class="teamBox" type="checkbox"></label><br/>
-      <label>Buffalo <input value="Buffalo" class="teamBox" type="checkbox"></label><br/>
-      <label>Carolina <input value="Carolina" class="teamBox" type="checkbox"></label><br/>
-      <label>Chicago <input value="Chicago" class="teamBox" type="checkbox"></label><br/>
-      <label>Cincinnati <input value="Cincinnati" class="teamBox" type="checkbox"></label><br/>
-      <label>Cleveland <input value="Cleveland" class="teamBox" type="checkbox"></label><br/>
-      <label>Dallas <input value="Dallas" class="teamBox" type="checkbox"></label><br/>
-      <label>Denver <input value="Denver" class="teamBox" type="checkbox"></label><br/>
-      <label>Detroit <input value="Detriot" class="teamBox" type="checkbox"></label><br/>
-      <label>Green Bay <input value="Green Bay" class="teamBox" type="checkbox"></label><br/>
-      <label>Houston <input value="Houston" class="teamBox" type="checkbox"></label><br/>
-      <label>Indianapolis <input value="Indianapolis" class="teamBox" type="checkbox"></label><br/>
-      <label>Jacksonville <input value="Jacksonville" class="teamBox" type="checkbox"></label><br/>
-      <label>Kansas City <input value="Kansas City" class="teamBox" type="checkbox"></label><br/>
-      <label>LA Rams <input value="LA Rams" class="teamBox" type="checkbox"></label><br/>
-      <label>LA Chargers <input value="LA Chargers" class="teamBox" type="checkbox"></label><br/>
-      <label>Miami <input value="Miami" class="teamBox" type="checkbox"></label><br/>
-      <label>Minnesota <input value="Minnesota" class="teamBox"type="checkbox"></label><br/>
-      <label>New England <input value="New England" class="teamBox" type="checkbox"></label><br/>
-      <label>New Orleans <input value="New Orleans" class="teamBox" type="checkbox"></label><br/>
-      <label>NY Jets <input value="NY Jets" class="teamBox" type="checkbox"></label><br/>
-      <label>NY Giants <input value="NY Giants" class="teamBox" type="checkbox"></label><br/>
-      <label>Oakland <input value="Oakland" class="teamBox" type="checkbox"></label><br/>
-      <label>Philadelphia <input value="Philadelphia" class="teamBox" type="checkbox"></label><br/>
-      <label>Pittsburgh <input value="Pittsburgh" class="teamBox" type="checkbox"></label><br/>
-      <label>San Francisco <input value="San Francisco" class="teamBox" type="checkbox"></label><br/>
-      <label>Seattle <input value="Seattle" class="teamBox" type="checkbox"></label><br/>
-      <label>Tampa Bay <input value="Tampa Bay" class="teamBox" type="checkbox"></label><br/>
-      <label>Tennessee <input value="Tennessee" class="teamBox" type="checkbox"></label><br/>
-      <label>Washington <input value="Washington" class="teamBox" type="checkbox"></label>
     </form>
   </div>
 </div>
 <div id="byeWeeks"></div>
-<button onclick="diceRoll()">Roll Teams</button>
+<button onclick="app.diceRoll()" style="display:none;" id="roll-button">Roll Teams</button>
 <div id="teams"></div>
 <script src="js/index.js"></script>
 </body>
